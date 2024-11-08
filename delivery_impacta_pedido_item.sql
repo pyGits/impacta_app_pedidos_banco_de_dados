@@ -16,29 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tenant`
+-- Table structure for table `pedido_item`
 --
 
-DROP TABLE IF EXISTS `tenant`;
+DROP TABLE IF EXISTS `pedido_item`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tenant` (
+CREATE TABLE `pedido_item` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(80) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `senha` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+  `pedido_id` int(11) NOT NULL,
+  `produto_id` int(11) NOT NULL,
+  `quantidade` int(11) NOT NULL,
+  `preco_unitario` decimal(10,2) NOT NULL,
+  `subtotal` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `pedido_id` (`pedido_id`),
+  KEY `produto_id` (`produto_id`),
+  CONSTRAINT `pedido_item_ibfk_1` FOREIGN KEY (`pedido_id`) REFERENCES `pedido` (`id`),
+  CONSTRAINT `pedido_item_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `produto` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tenant`
+-- Dumping data for table `pedido_item`
 --
 
-LOCK TABLES `tenant` WRITE;
-/*!40000 ALTER TABLE `tenant` DISABLE KEYS */;
-INSERT INTO `tenant` VALUES (15,'Eric','teste@gmail.com','$2b$10$z.tv9LG0WH1CW7oEla68mO0FdgOzDkmuG0VqYr7ZQ3GTFkYodY6s6'),(16,'Eric','peeyotenorges@gmail.com','$2b$10$.HJCycNo6HVyQsZ5TH1QOOBLAwzySsL7n6zwkw9YMGGIiz.AbBCuS');
-/*!40000 ALTER TABLE `tenant` ENABLE KEYS */;
+LOCK TABLES `pedido_item` WRITE;
+/*!40000 ALTER TABLE `pedido_item` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pedido_item` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
