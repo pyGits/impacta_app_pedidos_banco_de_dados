@@ -28,7 +28,7 @@ CREATE TABLE `tenant` (
   `email` varchar(100) DEFAULT NULL,
   `senha` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `tenant` (
 
 LOCK TABLES `tenant` WRITE;
 /*!40000 ALTER TABLE `tenant` DISABLE KEYS */;
-INSERT INTO `tenant` VALUES (15,'Eric','teste@gmail.com','$2b$10$z.tv9LG0WH1CW7oEla68mO0FdgOzDkmuG0VqYr7ZQ3GTFkYodY6s6'),(16,'Eric','peeyotenorges@gmail.com','$2b$10$.HJCycNo6HVyQsZ5TH1QOOBLAwzySsL7n6zwkw9YMGGIiz.AbBCuS');
+INSERT INTO `tenant` VALUES (17,'eric','peeyotenorges@gmail.com','$2b$10$2aNvXuLXlA8mkCeoiQSMSePcqOWc2gQK55o9ty0q/FzSH56v767lW'),(18,'teste','teste@teste.com.br','$2b$10$M80qyCeFZqGTqwHnBsNHUeuXP.VobKjrIE51CMZq47iXtUNIdr3Wm');
 /*!40000 ALTER TABLE `tenant` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-08 17:42:50
+-- Dump completed on 2024-11-28 17:02:26

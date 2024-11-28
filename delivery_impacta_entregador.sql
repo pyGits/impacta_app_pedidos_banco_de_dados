@@ -16,39 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cliente`
+-- Table structure for table `entregador`
 --
 
-DROP TABLE IF EXISTS `cliente`;
+DROP TABLE IF EXISTS `entregador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `cliente` (
+CREATE TABLE `entregador` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(80) DEFAULT NULL,
-  `cnpjcpf` varchar(20) DEFAULT NULL,
-  `rgie` varchar(20) DEFAULT NULL,
-  `telefone` varchar(20) DEFAULT NULL,
-  `celular` varchar(20) DEFAULT NULL,
-  `cep` varchar(10) DEFAULT NULL,
-  `logradouro` varchar(255) DEFAULT NULL,
-  `cidade` varchar(255) DEFAULT NULL,
-  `bairro` varchar(255) DEFAULT NULL,
-  `uf` varchar(2) DEFAULT NULL,
-  `complemento` varchar(255) DEFAULT NULL,
-  `numero` varchar(10) DEFAULT NULL,
-  `tenant_id` int(11) DEFAULT NULL,
+  `telefone` varchar(45) DEFAULT NULL,
+  `tenant_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cliente`
+-- Dumping data for table `entregador`
 --
 
-LOCK TABLES `cliente` WRITE;
-/*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (20,'CLIENTE 1','76090560000146','','','','','','','','','','',17),(21,'TESTE','','','','123456789','','','','','','','',17),(22,'TESTE','','','','11958114534','','','','','','','',17),(23,'TESTE','','','','1126281356','','','','','','','',17);
-/*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
+LOCK TABLES `entregador` WRITE;
+/*!40000 ALTER TABLE `entregador` DISABLE KEYS */;
+INSERT INTO `entregador` VALUES (5,'ENTREGADOR TESTE','',17),(6,'teste 2','123456',17),(7,'Entregador 4','123123123',17),(8,'ENTREGADOR NOVO','123156156156',17);
+/*!40000 ALTER TABLE `entregador` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -60,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-28 17:02:25
+-- Dump completed on 2024-11-28 17:02:26
